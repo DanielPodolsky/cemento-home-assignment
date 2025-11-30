@@ -1,6 +1,9 @@
 # Construction Task Tracker
 
-A high-performance, virtualized data table built with React and TypeScript. This project demonstrates advanced React patterns including component composition, optimization techniques, and generic/reusable architecture.
+A high-performance, virtualized data table built with React and TypeScript that handles 1M+ rows. This project demonstrates advanced React patterns including component composition, optimization techniques, and generic/reusable architecture.
+
+<img width="2561" height="1318" alt="image" src="https://github.com/user-attachments/assets/6b6afd50-a0de-4025-bc28-265493a4dde5" />
+
 
 ## Features
 
