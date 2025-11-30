@@ -41,6 +41,13 @@ const columns: TableColumn[] = [
       High: "bg-red-100 text-red-800",
     },
   },
+  {
+    id: "dueDate",
+    ordinalNo: 5,
+    title: "Due Date",
+    type: "string", // Treat as string for simplicity
+    width: 120,
+  },
 ];
 
 // Input: number of rows to generate. Output: TableData object.
@@ -75,6 +82,7 @@ export function generateMockData(rowCount: number): TableData {
         "Complete",
       ]),
       priority: faker.helpers.arrayElement(["Low", "Medium", "High"]),
+      dueDate: faker.date.soon({ days: 30 }).toLocaleDateString(),
     });
   }
   return { columns, data };

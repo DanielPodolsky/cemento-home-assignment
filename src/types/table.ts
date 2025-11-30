@@ -10,7 +10,7 @@ export interface TableColumn {
 
 export interface TableRow {
   id: string;
-  [columnId: string]: any; // Index signature for dynamic column keys (inherently optional, '?' not supported)
+  [columnId: string]: unknown; // Index signature for dynamic column keys (inherently optional, '?' not supported)
 }
 
 export interface TableData {
