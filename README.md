@@ -10,7 +10,7 @@ A high-performance, virtualized data table built with React and TypeScript that 
 - **Multi-Type Cell Rendering** - Supports string, number, boolean, and select data types with appropriate UI for each
 - **Column Visibility Toggle** - Users can show/hide columns dynamically
 - **Inline Cell Editing** - Click any cell to edit directly with type-appropriate inputs
-- **Virtualized Rendering** - Efficiently handles 10,000+ rows using react-window (only ~15 DOM nodes rendered)
+- **Virtualized Rendering** - Efficiently handles 1M+ rows using react-window (only ~15 DOM nodes rendered)
 - **Generic & Reusable** - Works with any dataset that follows the schema
 
 ## Tech Stack
@@ -146,7 +146,7 @@ Per the assignment guidelines, I added two optional properties to enhance reusab
 ## Architecture Decisions
 
 ### Why Virtualization?
-With 10,000 rows, rendering all DOM nodes would be extremely slow. react-window only renders visible rows (~15 at a time), maintaining smooth performance regardless of dataset size.
+With 1M+ rows, rendering all DOM nodes would be extremely slow. react-window only renders visible rows (~15 at a time), maintaining smooth performance regardless of dataset size.
 
 ### Why Not `<table>` Element?
 HTML table elements (`<table>`, `<tr>`, `<td>`) have rigid CSS layout rules that conflict with virtualization's absolute positioning requirements. Using `<div>` elements with flexbox provides the flexibility needed for virtualized scrolling.
@@ -199,7 +199,3 @@ No component changes required - the table automatically handles new columns.
 ## License
 
 This project was created as a technical assessment for Cemento.
-
----
-
-Built with React + TypeScript + Vite
